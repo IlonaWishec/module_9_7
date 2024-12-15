@@ -17,6 +17,5 @@ def sum_three(*args):
 
 result = sum_three(2, 3, 6)
 print(result)
-# Результат консоли:
 # Простое
 # 11
