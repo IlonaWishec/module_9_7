@@ -1,10 +1,13 @@
 def is_prime(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
-        if result > 1 and result / result == 1 and result / 1 == result:
-            print('Простое')
-        else:
+        if result < 2:
             print('Составное')
+        for i in range (2, int(result ** 0.5) + 1):
+            if result % i == 0:
+                print('Составное')
+        else:
+            print('Простое')
         return result
     return wrapper
 
